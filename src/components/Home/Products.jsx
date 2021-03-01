@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import tv from "../assets/img/tv.png";
-import mobile from "../assets/img/mobile-0819.jpg";
-import devices from "../assets/img/device-pile.png";
+import tv from "../../assets/img/tv.png";
+import mobile from "../../assets/img/mobile-0819.jpg";
+import devices from "../../assets/img/device-pile.png";
+import "../../assets/css/contentEmail.css";
 
 function Products() {
   return (
-    <div>
+    <main>
       <ul className="bg-black">
-        <li className="flex flex-row items-center justify-between px-52 border-b-8 border-gray-600">
+        <li className="flex flex-row items-center justify-between px-52 border-b-8 borderColorGray">
           <div className="mx-24">
             <h1 className="text-7xl font-medium text-white mb-3">
               Enjoy on your TV.
@@ -20,7 +21,7 @@ function Products() {
           </div>
           <img src={tv} alt="Teve" />
         </li>
-        <li className="flex flex-row-reverse items-center justify-between px-52 border-b-8 border-gray-600">
+        <li className="flex flex-row-reverse items-center justify-between px-52 border-b-8 borderColorGray">
           <div className="mx-10">
             <h1 className="text-7xl font-medium text-white mb-3">
               Download your shows to watch offline.
@@ -31,7 +32,7 @@ function Products() {
           </div>
           <img src={mobile} alt="Celular" />
         </li>
-        <li className="flex flex-row items-center justify-between px-52 border-b-8 border-gray-600">
+        <li className="flex flex-row items-center justify-between px-52 border-b-8 borderColorGray">
           <div className="mx-16">
             <h1 className="text-7xl font-medium text-white mb-3">
               Watch everywhere.
@@ -44,7 +45,7 @@ function Products() {
           <img src={devices} alt="Aparelhos" />
         </li>
       </ul>
-    </div>
+    </main>
   );
 }
 

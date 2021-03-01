@@ -4,52 +4,7 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import ContentEmail from "./ContentEmail";
-
-const Accordion = withStyles({
-  root: {
-    boxShadow: "none",
-    backgroundColor: "#303030",
-    color: "white",
-    width: "45vw",
-    marginBottom: "7px",
-    "&:not(:last-child)": {
-      borderBottom: 0,
-    },
-    "&:before": {
-      display: "none",
-    },
-    "&$expanded": {
-      margin: "auto",
-    },
-  },
-  expanded: {},
-})(MuiAccordion);
-
-const AccordionSummary = withStyles({
-  root: {
-    fontSize: "24px",
-    backgroundColor: "rgba(0, 0, 0, .03)",
-    borderBottom: "2px solid rgba(0, 0, 0, 1)",
-    marginBottom: -1,
-    minHeight: 56,
-    "&$expanded": {
-      minHeight: 56,
-    },
-  },
-  content: {
-    "&$expanded": {
-      margin: "12px 0",
-    },
-  },
-  expanded: {},
-})(MuiAccordionSummary);
-
-const AccordionDetails = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-    borderBottom: "7px solid rgba(0, 0, 0, 1)",
-  },
-}))(MuiAccordionDetails);
+import "../../assets/css/contentEmail.css";
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = useState("");
@@ -59,8 +14,8 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <>
-      <h1 className="text-7xl font-semibold text-white my-10">
+    <div className="border-b-8 borderColorGray w-full flex items-center flex-col justify-center">
+      <h1 className="text-7xl font-semibold text-white my-16">
         Frequently Asked Questions
       </h1>
       <Accordion
@@ -154,6 +109,52 @@ export default function CustomizedAccordions() {
         </AccordionDetails>
       </Accordion>
       <ContentEmail />
-    </>
+    </div>
   );
 }
+
+const Accordion = withStyles({
+  root: {
+    boxShadow: "none",
+    backgroundColor: "#303030",
+    color: "white",
+    width: "45vw",
+    marginBottom: "7px",
+    "&:not(:last-child)": {
+      borderBottom: 0,
+    },
+    "&:before": {
+      display: "none",
+    },
+    "&$expanded": {
+      margin: "auto",
+    },
+  },
+  expanded: {},
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    fontSize: "24px",
+    backgroundColor: "rgba(0, 0, 0, .03)",
+    borderBottom: "2px solid rgba(0, 0, 0, 1)",
+    marginBottom: -1,
+    minHeight: 56,
+    "&$expanded": {
+      minHeight: 56,
+    },
+  },
+  content: {
+    "&$expanded": {
+      margin: "12px 0",
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+    borderBottom: "7px solid rgba(0, 0, 0, 1)",
+  },
+}))(MuiAccordionDetails);
