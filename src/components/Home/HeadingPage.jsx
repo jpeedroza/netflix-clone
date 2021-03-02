@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+
 import ContentEmail from "./ContentEmail";
 import "../../assets/css/contentEmail.css";
 
@@ -9,7 +11,7 @@ function HeadingPage({ logo }) {
       <header className="flex justify-between px-14 pt-7 items-center mb-48">
         <img src={logo} alt="logo" className=" w-48" />
         <button className="bg-red-600 text-white rounded-md p-2">
-          Sign In
+          <Link to="/login">Sign in</Link>
         </button>
       </header>
       <main className="flex justify-center items-center flex-col">
