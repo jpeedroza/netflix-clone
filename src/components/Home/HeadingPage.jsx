@@ -10,9 +10,12 @@ function HeadingPage({ logo }) {
     <header className="bg-black border-b-8 borderColorGray pb-48">
       <header className="flex justify-between px-14 pt-7 items-center mb-48">
         <img src={logo} alt="logo" className=" w-48" />
-        <button className="bg-red-600 text-white rounded-md p-2">
-          <Link to="/login">Sign in</Link>
-        </button>
+        <Link
+          to="/login"
+          className="bg-red-600 text-white rounded-md p-2 text-center"
+        >
+          Sign in
+        </Link>
       </header>
       <main className="flex justify-center items-center flex-col">
         <h2 className="text-white text-7xl font-semibold text-center mb-5 w-5/12 leading-tight">

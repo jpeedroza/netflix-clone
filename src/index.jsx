@@ -6,8 +6,11 @@ import HeadingPage from "./components/Home/HeadingPage";
 import Products from "./components/Home/Products";
 import Accordion from "./components/Home/Accordion";
 import FooterContent from "./components/Home/FooterContent";
+
 import FooterMain from "./components/Login/FooterMain";
 import FooterContentLogin from "./components/Login/FooterContent";
+
+import Accounts from "./components/Browser/Accounts";
 
 import logo from "./assets/img/logo.png";
 import "./assets/css/index.css";
@@ -34,10 +37,19 @@ function LoginPage() {
   );
 }
 
+function BrowserPage() {
+  return (
+    <>
+      <Accounts logo={logo} />
+    </>
+  );
+}
+
 ReactDOM.render(
   <Router>
     <Route exact path="/" component={HomePage} />
     <Route exact path="/login" component={LoginPage} />
+    <Route exact path="/browser" component={BrowserPage} />
   </Router>,
   document.getElementById("root")
 );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function FooterMain({ logo }) {
   const [showInfo, setShowInfo] = useState(false);
@@ -6,7 +7,9 @@ export default function FooterMain({ logo }) {
   return (
     <>
       <header className="flex justify-between px-14 pt-7 items-center pb-10 bg-black">
-        <img src={logo} alt="logo" className=" w-44" />
+        <Link to="/">
+          <img src={logo} alt="logo" className=" w-44" />
+        </Link>
       </header>
       <div className="bg-black flex flex-col justify-center items-center pb-28">
         <main className="flex flex-col w-1/4 justify-center bg-gray-700">
@@ -22,11 +25,19 @@ export default function FooterMain({ logo }) {
               placeholder="Password"
               className="rounded p-3 mb-10"
             />
-            <input
-              type="submit"
-              value="Sign In"
-              className="text-white bg-red-600 p-3 rounded mb-2 cursor-pointer"
-            />
+            <Link
+              to="/browser"
+              className="text-white bg-red-600 p-3 rounded mb-2 cursor-pointer text-center"
+            >
+              Sign In
+            </Link>
+
+            {/* <input
+                type="submit"
+                value="Sign In"
+                className="text-white bg-red-600 p-3 rounded mb-2 cursor-pointer"
+                
+              /> */}
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <input type="checkbox" className="" />
@@ -51,7 +62,7 @@ export default function FooterMain({ logo }) {
               bot.{" "}
               <span
                 className="text-blue-600 cursor-pointer hover:underline"
-                onClick={() => setShowInfo(true)}
+                onClick={() => setShowInfo(!showInfo)}
               >
                 Learn More.
               </span>
