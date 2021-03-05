@@ -4,7 +4,7 @@ import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import ContentEmail from "./ContentEmail";
-import "../../assets/css/contentEmail.css";
+import "../../styles/contents.css";
 
 export default function CustomizedAccordions() {
   const [expanded, setExpanded] = useState("");
@@ -14,17 +14,17 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div className="border-b-8 borderColorGray w-full flex items-center flex-col justify-center">
-      <h1 className="text-7xl font-semibold text-white my-16">
+    <section className="border-b-8 borderColorGray w-full flex items-center flex-col justify-center">
+      <h2 className="text-7xl font-semibold text-white my-16">
         Frequently Asked Questions
-      </h1>
+      </h2>
       <Accordion
         square
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <h1>What is Netflix?</h1>
+          <h2>What is Netflix?</h2>
         </AccordionSummary>
         <AccordionDetails>
           <p className="text-xl leading-7">
@@ -43,7 +43,7 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel2")}
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <h1>How much does Netflix cost?</h1>
+          <h2>How much does Netflix cost?</h2>
         </AccordionSummary>
         <AccordionDetails>
           <p className="text-xl leading-7">
@@ -59,7 +59,7 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <h1>Where can i watch?</h1>
+          <h2>Where can i watch?</h2>
         </AccordionSummary>
         <AccordionDetails>
           <p className="text-xl leading-7">
@@ -81,7 +81,7 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel4")}
       >
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <h1>How do i cancel?</h1>
+          <h2>How do i cancel?</h2>
         </AccordionSummary>
         <AccordionDetails>
           <p className="text-xl leading-7">
@@ -98,7 +98,7 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel5")}
       >
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <h1>What can i watch on Netflix?</h1>
+          <h2>What can i watch on Netflix?</h2>
         </AccordionSummary>
         <AccordionDetails>
           <p className="text-xl leading-7">
@@ -109,7 +109,7 @@ export default function CustomizedAccordions() {
         </AccordionDetails>
       </Accordion>
       <ContentEmail />
-    </div>
+    </section>
   );
 }
 

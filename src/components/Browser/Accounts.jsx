@@ -15,7 +15,9 @@ export default function Accounts({ logo }) {
     <div className="bg-black">
       <header className="flex px-14 pt-7 items-center">
         <Link to="/">
-          <img src={logo} alt="logo" className=" w-20" />
+          <picture>
+            <img src={logo} alt="logo" className=" w-20" />
+          </picture>
         </Link>
         {showProfile && (
           <>
@@ -28,37 +30,37 @@ export default function Accounts({ logo }) {
               </li>
               <li className="text-white mx-2 hover:text-gray-300">My List</li>
             </ul>
-            <div className="ml-auto">
-              <span className="text-white mx-2 hover:text-gray-100">
-                search
-              </span>
-              <span className="text-white mx-2 hover:text-gray-100">gift</span>
-              <span className="text-white mx-2 hover:text-gray-100">
+            <ul className="ml-auto flex">
+              <li className="text-white mx-2 hover:text-gray-100">search</li>
+              <li className="text-white mx-2 hover:text-gray-100">gift</li>
+              <li className="text-white mx-2 hover:text-gray-100">
                 notification
-              </span>
-              <span className="text-white hover:text-gray-100">sanduiche</span>
-            </div>
+              </li>
+              <li className="text-white hover:text-gray-100">sanduiche</li>
+            </ul>
           </>
         )}
       </header>
 
       {showProfile ? (
         <>
-          <div className="bg-red-100 bg-no-repeat bg-cover pt-60 pl-10">
-            <img
-              className="w-4/12"
-              src={logoMain}
-              alt={`logo de ${logoMain}`}
-            />
-            <div className="flex items-center pt-5">
+          <section className="bg-snk-img pt-60 pl-10 ">
+            <picture>
+              <img
+                className="w-4/12"
+                src={logoMain}
+                alt={`logo de ${logoMain}`}
+              />
+            </picture>
+            <article className="flex items-center pt-5">
               <div className="bg-red-600 rounded-lg w-10 text-center leading-3 h-8">
                 <span className="text-white font-bold text-xs">TOP 10</span>
               </div>
               <span className="text-white font-semibold text-2xl pl-3 ">
                 #9 in TV Shows Today
               </span>
-            </div>
-            <div className="pt-5">
+            </article>
+            <article className="pt-5">
               <h1 className="text-white text-2xl max-w-xl">
                 What does it take to keep a 21st-century family going strong?
                 Same thing as always: laughter and love.
@@ -69,8 +71,19 @@ export default function Accounts({ logo }) {
               <button className="bg-gray-800 bg-opacity-70 text-white font-semibold w-32 h-10 rounded">
                 More Info
               </button>
+            </article>
+          </section>
+          <section className="bg-black ml-10 pb-32 mt-5">
+            <h2 className="text-white text-3xl">Recomendações</h2>
+            <div className="flex mt-5">
+              <div className="bg-red-400 w-72 h-40 rounded" />
+              <div className="bg-red-400 w-72 h-40 rounded ml-5" />
+              <div className="bg-red-400 w-72 h-40 rounded ml-5" />
+              <div className="bg-red-400 w-72 h-40 rounded ml-5" />
+              <div className="bg-red-400 w-72 h-40 rounded ml-5" />
+              <div className="bg-red-400 w-72 h-40 rounded ml-5" />
             </div>
-          </div>
+          </section>
         </>
       ) : (
         <>

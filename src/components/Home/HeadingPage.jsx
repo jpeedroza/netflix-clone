@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import ContentEmail from "./ContentEmail";
-import "../../assets/css/contentEmail.css";
+import "../../styles/contents.css";
 
 function HeadingPage({ logo }) {
   return (
@@ -18,12 +18,12 @@ function HeadingPage({ logo }) {
         </Link>
       </header>
       <main className="flex justify-center items-center flex-col">
-        <h2 className="text-white text-7xl font-semibold text-center mb-5 w-5/12 leading-tight">
+        <h1 className="text-white text-7xl font-semibold text-center mb-5 w-5/12 leading-tight">
           Unlimited movies, TV shows, and more.
-        </h2>
-        <h3 className="text-white text-3xl tracking-wide mb-5">
+        </h1>
+        <h2 className="text-white text-3xl tracking-wide mb-5">
           Watch anywhere. Cancel anytime.
-        </h3>
+        </h2>
         <ContentEmail />
       </main>
     </header>

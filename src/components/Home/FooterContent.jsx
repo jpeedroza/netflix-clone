@@ -8,7 +8,7 @@ export default function FooterContent() {
         Questions? Call
         <strong className="hover:underline"> 0800-761-4632</strong>
       </h3>
-      <div className="flex">
+      <nav className="flex">
         <ul>
           <LinkFooter content="FAQ" />
           <LinkFooter content="Help Center" />
@@ -34,7 +34,7 @@ export default function FooterContent() {
           <LinkFooter content="Speed Test" />
           <LinkFooter content="Legal Notices" />
         </ul>
-      </div>
+      </nav>
     </footer>
   );
 }

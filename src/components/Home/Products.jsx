@@ -2,7 +2,7 @@ import React from "react";
 import tv from "../../assets/img/tv.png";
 import mobile from "../../assets/img/mobile-0819.jpg";
 import devices from "../../assets/img/device-pile.png";
-import "../../assets/css/contentEmail.css";
+import "../../styles/contents.css";
 
 function Products() {
   return (

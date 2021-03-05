@@ -8,7 +8,7 @@ export default function FooterContentLogin() {
         Questions? Call
         <strong className="hover:underline"> 0800-761-4632</strong>
       </h3>
-      <div className="flex">
+      <nav className="flex">
         <ul>
           <LinkFooter content="FAQ" />
           <LinkFooter content="Cookie Preferences" />
@@ -23,7 +23,7 @@ export default function FooterContentLogin() {
         <ul>
           <LinkFooter content="Privacy" />
         </ul>
-      </div>
+      </nav>
     </footer>
   );
 }

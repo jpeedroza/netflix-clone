@@ -11,10 +11,10 @@ export default function FooterMain({ logo }) {
           <img src={logo} alt="logo" className=" w-44" />
         </Link>
       </header>
-      <div className="bg-black flex flex-col justify-center items-center pb-28">
-        <main className="flex flex-col w-1/4 justify-center bg-gray-700">
+      <main className="bg-black flex flex-col justify-center items-center pb-28">
+        <section className="flex flex-col w-1/4 justify-center bg-gray-700">
           <form className="flex flex-col justify-center m-14">
-            <h2 className="text-4xl font-semibold text-white mb-6">Sign In</h2>
+            <h1 className="text-4xl font-semibold text-white mb-6">Sign In</h1>
             <input
               type="text"
               placeholder="Email or Phone Number"
@@ -38,7 +38,7 @@ export default function FooterMain({ logo }) {
                 className="text-white bg-red-600 p-3 rounded mb-2 cursor-pointer"
                 
               /> */}
-            <div className="flex justify-between items-center">
+            <article className="flex justify-between items-center">
               <div className="flex items-center">
                 <input type="checkbox" className="" />
                 <span className="ml-1 text-white">Remember me</span>
@@ -46,9 +46,9 @@ export default function FooterMain({ logo }) {
               <span className="text-white cursor-pointer hover:underline">
                 Need Help ?
               </span>
-            </div>
+            </article>
           </form>
-          <div className="flex flex-col justify-center mx-14">
+          <section className="flex flex-col justify-center mx-14">
             <p className="text-gray-300 mb-3">Login with Facebook</p>
             <h3 className="text-sm text-gray-300 mb-3">
               New to Netflix?{" "}
@@ -83,9 +83,9 @@ export default function FooterMain({ logo }) {
                 used for personalized advertising by Google).
               </p>
             )}
-          </div>
-        </main>
-      </div>
+          </section>
+        </section>
+      </main>
     </>
   );
 }

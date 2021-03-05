@@ -2,13 +2,17 @@
   position: absolute;
   right: 1220px;
   pointer-events: none;
-  transform: translateY(0px);
   transition: 0.5s ease-in-out transform;
+  transform: translateY(--test);
 }
 .inputEm:focus ~ .labelEm,
 .labelEm:focus {
-  transform: translateY(-20px);
+  /* transform: translateY(-20px); */
 }
 .borderColorGray {
   border-color: #222;
+}
+.bg-snk-img {
+  background-image: url("../assets/img/snk-img.jpg");
+  background-size: cover;
 }
